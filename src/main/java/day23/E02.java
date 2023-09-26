@@ -1,0 +1,27 @@
+package day23;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class E02 {
+    public static void main(String[] args) throws IOException {
+
+
+        try {
+            FileInputStream fis = new FileInputStream("src\\main\\java\\day23exceptions\\file.txt");
+
+            int k = 0;
+
+            while ((k = fis.read()) != -1) {
+
+                System.out.print((char) k);
+
+
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+
+        }
+    }
+}
